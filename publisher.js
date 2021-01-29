@@ -6,7 +6,7 @@ const MAX= 40;
 
 client.on('connect', function () {
     setInterval(function() {
-        client.publish('temperatura', Math.floor(Math.random()*(MAX-MIN+1)+MIN));
+        client.publish('temperatura', Math.floor(Math.random()*(MAX-MIN+1)+MIN).toString());
         console.log('New Temperature');
     }, 5000);
 });
